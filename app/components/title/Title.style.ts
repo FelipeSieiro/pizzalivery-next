@@ -1,6 +1,7 @@
+import { colors } from "@/app/style/Colors"
+import { sizes } from "@/app/style/Sizes"
 import styled from "styled-components"
-import { colors } from "../../styles/Colors"
-import { sizes } from "../../styles/Sizes"
+
 
 export const ElementTitle = styled.h1`
   padding-top: ${sizes.main};

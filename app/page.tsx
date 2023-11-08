@@ -8,7 +8,7 @@ export default function Home() {
    return (
     <Layout>
       <HomeWrapper>
-        <LinkButton href= "/size"> Iniciar pedido</LinkButton>
+        <LinkButton href= "/sizes"> Iniciar pedido</LinkButton>
       </HomeWrapper>
     </Layout>
   )

@@ -6,12 +6,12 @@ import OrderContext from "../contexts/OrderContext"
 import Layout from "../layout"
 import { Title } from "../components/title/Title"
 import { Button } from "../components/button/Button"
+import { useRouter } from "next/router"
 
 
 export default function Sizes() {
-  const navigate = useNavigate()
+  const router = useRouter()
   const { pizzaSize, setPizzaSize } = useContext(OrderContext)
-
   const [sizeId, setSizeId] = useState("")
   const [pizzaSizeOptions, setPizzaSizeOptions] = useState([])
   const [isLoading, setIsLoading] = useState(false)
@@ -38,13 +38,14 @@ export default function Sizes() {
   }
 
   const handleBack = () => {
-    navigate(routes.home)
+    router.push('/home')
   }
 
   const handleNext = () => {
     const selectedSize = getPizzaSize(sizeId)
     setPizzaSize(selectedSize)
-    navigate(routes.pizzaFlavour)
+    router.push('/pizzaFlavour')
+    
   }
 
   useEffect(() => {

@@ -4,7 +4,7 @@ import { useContext, useState } from "react"
 import OrderContext from "../contexts/OrderContext"
 
 export default function Login() {
-  const navigate = useNavigate()
+  const navigate = navigate()
   const { pizzaOrder } = useContext(OrderContext)
 
   const [login, setLogin] = useState("")

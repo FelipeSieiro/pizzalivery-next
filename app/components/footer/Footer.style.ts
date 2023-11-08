@@ -1,3 +1,4 @@
+"use client"
 import { colors } from "@/app/style/Colors"
 import { sizes } from "@/app/style/Sizes"
 import styled from "styled-components"
