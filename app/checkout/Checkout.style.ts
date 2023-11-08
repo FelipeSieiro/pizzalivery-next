@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { sizes } from "../../styles/Sizes"
-import { colors } from "../../styles/Colors"
+import { colors } from "../style/Colors"
+import { sizes } from "../style/Sizes"
 
 export const CheckoutItem = styled.section`
   padding: ${sizes.large} 0;
