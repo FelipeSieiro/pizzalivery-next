@@ -1,9 +1,7 @@
 "use client"
 
 import { useContext, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { routes } from "../../routes"
-import OrderContext from "../../contexts/OrderContext"
+import OrderContext from "../contexts/OrderContext"
 
 export default function Login() {
   const navigate = useNavigate()
