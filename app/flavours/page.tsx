@@ -13,7 +13,7 @@ import { Title } from "../components/title/Title"
 import Layout from "../layout"
 import { Button } from "../components/button/Button"
 import OrderContext from "../contexts/OrderContext"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 
 
 export default function Flavours() {

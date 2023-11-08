@@ -1,3 +1,4 @@
+"use client"
 import styled from "styled-components"
 import { sizes } from "../style/Sizes"
 import { colors } from "../style/Colors"

@@ -11,6 +11,7 @@ import OrderContext from "../contexts/OrderContext"
 import Layout from "../layout"
 import { Title } from "../components/title/Title"
 import { Button } from "../components/button/Button"
+import { convertToCurrency } from "../helpers/convertToCurrency"
 
 export default function Checkout() {
   const { pizzaOrder } = useContext(OrderContext)

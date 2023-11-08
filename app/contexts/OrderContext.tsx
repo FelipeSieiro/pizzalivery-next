@@ -1,3 +1,4 @@
+"use client"
 import { createContext, useState } from "react"
 
 type PizzaSizeType = {
@@ -59,6 +60,7 @@ const OrderContextProvider = ({ children }) => {
       }}
     >
       {children}
+      
     </OrderContext.Provider>
   )
 }

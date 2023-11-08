@@ -1,17 +1,18 @@
 "use client"
 import { useContext, useEffect, useState } from "react"
-
 import { RadioCard, SizeActionWrapper, SizeContentWrapper } from "./Sizes.style"
-import OrderContext from "../contexts/OrderContext"
+import { Button } from "../components/button/Button"
 import Layout from "../layout"
 import { Title } from "../components/title/Title"
-import { Button } from "../components/button/Button"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
+import OrderContext from "../contexts/OrderContext"
+
+
 
 
 export default function Sizes() {
   const router = useRouter()
-  const { pizzaSize, setPizzaSize } = useContext(OrderContext)
+  const { pizzaSize, setPizzaSize } = useContext(OrderContext);
   const [sizeId, setSizeId] = useState("")
   const [pizzaSizeOptions, setPizzaSizeOptions] = useState([])
   const [isLoading, setIsLoading] = useState(false)
@@ -38,15 +39,15 @@ export default function Sizes() {
   }
 
   const handleBack = () => {
-    router.push('/home')
+    router.push("/")
   }
 
   const handleNext = () => {
-    const selectedSize = getPizzaSize(sizeId)
-    setPizzaSize(selectedSize)
-    router.push('/pizzaFlavour')
-    
+    const selectedSize = getPizzaSize(sizeId);
+    setPizzaSize(selectedSize);
+    router.push("/flavours"); 
   }
+  
 
   useEffect(() => {
     if (!pizzaSize) return
@@ -91,7 +92,7 @@ export default function Sizes() {
         <Button inverse="inverse" onClick={handleBack}>
           Voltar
         </Button>
-        <Button onClick={handleNext}>Escolha o sabor</Button>
+        <Button onClick={handleNext} > Escolha o sabor </Button>
       </SizeActionWrapper>
     </Layout>
   )
